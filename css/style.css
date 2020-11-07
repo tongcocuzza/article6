@@ -1,0 +1,75 @@
+:root {
+  --clip-shape: ellipse(200% 90% at 100% 0%);
+  --text-color: #a7cc1d;
+  --overlap-color: #fff;
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../font/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: calc(4vw + 1em);
+  font-family: "RobotoMono";
+  font-variation-settings: "wght" 700;
+}
+
+.diagonal__box {
+  height: 70vh;
+  position: relative;
+}
+
+.diagonal__box--background {
+  -webkit-clip-path: var(--clip-shape);
+  clip-path: var(--clip-shape);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.image {
+  background: url(/image/david-gardiner--VSZCFZ0avo-unsplash.jpg);
+  background-size: cover;
+}
+
+.clipped-text {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0 1.5rem 3rem 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  text-align: center;
+  z-index: 3;
+}
+
+.clipped-text::after {
+  content: attr(data-heading);
+  color: var(--overlap-color);
+  -webkit-clip-path: var(--clip-shape);
+  clip-path: var(--clip-shape);
+  margin: inherit;
+  padding: inherit;
+  height: inherit;
+  width: inherit;
+  position: inherit;
+  bottom: inherit;
+  right: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  text-align: inherit;
+  z-index: 4;
+}
