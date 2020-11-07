@@ -1,5 +1,5 @@
 :root {
-  --clip-shape: ellipse(200% 90% at 100% 0%);
+  --clip-shape: ellipse(210% 95% at 100% 0%);
   --text-color: #a7cc1d;
   --overlap-color: #fff;
 }
@@ -42,7 +42,7 @@ h1 {
 .clipped-text {
   color: var(--text-color);
   margin: 0;
-  padding: 0 1.5rem 3rem 0;
+  padding: 0 1rem 0 0;
   height: 100%;
   width: 100%;
   position: absolute;
