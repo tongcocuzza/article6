@@ -51,11 +51,11 @@ h1 {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
-  text-align: center;
+  text-align: right;
   z-index: 3;
 }
 
-.clipped-text::after {
+.clipped-text::before {
   content: attr(data-heading);
   color: var(--overlap-color);
   -webkit-clip-path: var(--clip-shape);
