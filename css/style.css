@@ -55,7 +55,7 @@ h1 {
   z-index: 3;
 }
 
-.clipped-text::before {
+.clipped-text::after {
   content: attr(data-heading);
   color: var(--overlap-color);
   -webkit-clip-path: var(--clip-shape);
