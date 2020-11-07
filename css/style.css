@@ -21,7 +21,7 @@ h1 {
 }
 
 .diagonal__box {
-  height: 70vh;
+  height: 50vh;
   position: relative;
 }
 
@@ -72,4 +72,22 @@ h1 {
   align-items: inherit;
   text-align: inherit;
   z-index: 4;
+}
+
+.svg__clip {
+  width: 90%;
+  height: 100%;
+  margin: 0;
+  padding-left: 2rem;
+  position: absolute; 
+}
+
+svg {
+  clip-path: url(#svgpath);
+}
+
+@media only screen and (max-width: 800px) {
+  image {
+    width: 100%;
+  }
 }
